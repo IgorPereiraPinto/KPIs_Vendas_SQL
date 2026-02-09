@@ -29,12 +29,18 @@ Este projeto entrega um conjunto completo de análises em **SQL Server (T-SQL)**
 - **Qualidade de dados**: `/05_Qualidade_e_Confiabilidade`  
 - **Base staging**: `/01_Base_Staging`  
 
+codex/create-and-publish-kpi-analysis-project-2074tc
+## Como os dados chegam (ETL/ELT)
+- A camada **ETL/ELT** está em `/06_ETL_ELT`, cobrindo **Raw → Staging → DW → Marts**.  
+- Consulte `00_Documentacao/04_Processo_ETL.md` para regras de qualidade, incremental e SCD.  
+
 
 ## Como os dados chegam (ETL/ELT)
 - A camada de ETL/ELT está em `/06_ETL_ELT`, cobrindo **Raw → Staging → DW → Marts**.
 - Consulte `00_Documentacao/04_Processo_ETL.md` para regras de qualidade, incremental e SCD.
  
 
+main
 
 ## Como adaptar para outro banco/esquema
 1) Ajuste nomes de tabelas/colunas em **00_Documentacao/00_Modelo_Dados.md**.  
@@ -43,14 +49,23 @@ Este projeto entrega um conjunto completo de análises em **SQL Server (T-SQL)**
 4) Reexecute validações em **05_Qualidade_e_Confiabilidade**.  
 
 ## Estrutura do repositório
+codex/create-and-publish-kpi-analysis-project-2074tc
+
+main
 00_Documentacao/
 01_Base_Staging/
 02_KPIs_Principais/
 03_Analises_por_Produto_e_Categoria/
 04_Performance_Vendedor_e_Gerente/
 05_Qualidade_e_Confiabilidade/
+codex/create-and-publish-kpi-analysis-project-2074tc
+06_ETL_ELT/
+99_Utils/
+
+
 
 06_ETL_ELT/
 
+main
 
 > Dica: comece pela pasta **01_Base_Staging** para garantir que os cálculos de Receita, Resultado e Margem estejam corretos antes das análises.
