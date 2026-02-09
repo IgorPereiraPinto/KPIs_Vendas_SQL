@@ -29,16 +29,11 @@ Este projeto entrega um conjunto completo de análises em **SQL Server (T-SQL)**
 - **Qualidade de dados**: `/05_Qualidade_e_Confiabilidade`  
 - **Base staging**: `/01_Base_Staging`  
 
-codex/create-and-publish-kpi-analysis-project-2074tc
+
 ## Como os dados chegam (ETL/ELT)
 - A camada **ETL/ELT** está em `/06_ETL_ELT`, cobrindo **Raw → Staging → DW → Marts**.  
 - Consulte `00_Documentacao/04_Processo_ETL.md` para regras de qualidade, incremental e SCD.  
 
-
-## Como os dados chegam (ETL/ELT)
-- A camada de ETL/ELT está em `/06_ETL_ELT`, cobrindo **Raw → Staging → DW → Marts**.
-- Consulte `00_Documentacao/04_Processo_ETL.md` para regras de qualidade, incremental e SCD.
- 
 
 main
 
