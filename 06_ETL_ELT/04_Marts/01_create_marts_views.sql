@@ -3,9 +3,9 @@
   Script: Views de Marts
   Objetivo:
     Criar views finais para consumo analítico.
-  Inputs:
+  Entradas:
     Tabelas dbo.dw_*.
-  Outputs:
+  Saídas:
     Views dbo.vw_*.
 */
 

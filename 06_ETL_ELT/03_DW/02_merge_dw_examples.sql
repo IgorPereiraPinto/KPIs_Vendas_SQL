@@ -3,9 +3,9 @@
   Script: MERGE DW (exemplos)
   Objetivo:
     Demonstrar MERGE para atualizar dimensões e fato no DW.
-  Inputs:
+  Entradas:
     Tabelas dbo.stg_*.
-  Outputs:
+  Saídas:
     Tabelas dbo.dw_* atualizadas.
 */
 

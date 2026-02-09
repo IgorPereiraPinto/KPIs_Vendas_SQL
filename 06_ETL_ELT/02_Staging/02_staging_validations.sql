@@ -3,9 +3,9 @@
   Script: Validações Staging
   Objetivo:
     Validar schema, nulos, duplicidades e ranges na camada staging.
-  Inputs:
+  Entradas:
     Tabelas dbo.stg_*.
-  Outputs:
+  Saídas:
     Resultados de auditoria (consultas de verificação).
 */
 

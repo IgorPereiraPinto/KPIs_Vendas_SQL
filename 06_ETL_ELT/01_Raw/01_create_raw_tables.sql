@@ -1,11 +1,11 @@
 /*
   Projeto: KPIs_Vendas_SQL
-  Script: CREATE TABLE - Raw
+  Script: CREATE TABLE - Camada Raw
   Objetivo:
     Criar tabelas raw para ingestão sem transformação.
-  Inputs:
+  Entradas:
     Arquivos brutos/extrações dos sistemas fonte.
-  Outputs:
+  Saídas:
     Tabelas raw_* criadas no schema dbo.
 */
 

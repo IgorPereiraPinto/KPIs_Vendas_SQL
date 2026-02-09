@@ -3,9 +3,9 @@
   Script: Validações DW
   Objetivo:
     Checar chaves, reconciliação e consistência na camada DW.
-  Inputs:
+  Entradas:
     Tabelas dbo.dw_*.
-  Outputs:
+  Saídas:
     Resultados de auditoria (consultas de verificação).
 */
 

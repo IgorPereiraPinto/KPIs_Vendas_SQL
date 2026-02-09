@@ -1,11 +1,11 @@
 /*
   Projeto: KPIs_Vendas_SQL
-  Script: CREATE TABLE - DW
+  Script: CREATE TABLE - Camada DW
   Objetivo:
     Criar tabelas dimensionais e fato no Data Warehouse.
-  Inputs:
+  Entradas:
     Tabelas dbo.stg_*.
-  Outputs:
+  Saídas:
     Tabelas dbo.dw_*.
 */
 

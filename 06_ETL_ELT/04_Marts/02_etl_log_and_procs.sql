@@ -1,11 +1,11 @@
 /*
   Projeto: KPIs_Vendas_SQL
-  Script: Log e Stored Procedures ETL
+  Script: Log e Procedures de ETL
   Objetivo:
-    Criar tabela de log e exemplos de stored procedures para ETL.
-  Inputs:
+    Criar tabela de log e exemplos de procedures para ETL.
+  Entradas:
     Tabelas raw/stg/dw.
-  Outputs:
+  Saídas:
     dbo.etl_run_log e procedures usp_etl_*.
 */
 
@@ -58,7 +58,22 @@ BEGIN
     INSERT INTO dbo.etl_run_log (Processo, Status, Observacao)
     VALUES ('merge_dw', 'STARTED', 'Merge para DW');
 
-    -- Exemplo: executar MERGE nas dimensões e fato.
+    -- Exemplo: executar MERGE nas dimensões (SCD Tipo 1).
+    MERGE dbo.dw_dProdutos AS target
+    USING (
+        SELECT Id_Produto, Produto, Categoria, Marca
+        FROM dbo.stg_dProdutos
+    ) AS source
+    ON target.Id_Produto = source.Id_Produto
+    WHEN MATCHED THEN
+        UPDATE SET
+            target.Produto = source.Produto,
+            target.Categoria = source.Categoria,
+            target.Marca = source.Marca,
+            target.Updated_At = SYSUTCDATETIME()
+    WHEN NOT MATCHED THEN
+        INSERT (Id_Produto, Produto, Categoria, Marca)
+        VALUES (source.Id_Produto, source.Produto, source.Categoria, source.Marca);
 
     UPDATE dbo.etl_run_log
     SET Status = 'FINISHED', Fim_Em = SYSUTCDATETIME()
